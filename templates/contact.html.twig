@@ -2,14 +2,14 @@
     {% block body %}
 
       <section class="form-container d-flex align-items-center">
-            <div class="container d-flex align-items-center justify-content-start flex-column">
+            <div class="form-container--container container d-flex align-items-center justify-content-start flex-column">
 
                 <h2 class = "mt-4">Kapcsolatfelvétel</h2>
 
                 {% for label, messages in app.flashes(['success']) %}
 
                     {% for message in messages %}
-                    <div class="alert alert-success col-lg-6 flash-{{ label }}">
+                    <div class="container alert alert-success flash-{{ label }}">
                         {{ message }}
                     </div>
                     {% endfor %}
@@ -19,7 +19,7 @@
                 {% for label, messages in app.flashes(['warning']) %}
 
                     {% for message in messages %}
-                    <div class="alert alert-danger col-lg-6 flash-{{ label }}">
+                    <div class="container alert alert-danger flash-{{ label }}">
                         {{ message }}
                     </div>
                     {% endfor %}

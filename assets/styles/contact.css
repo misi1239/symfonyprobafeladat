@@ -2,7 +2,7 @@
     height: 100vh;
 }
 
-.form-container .container{
+.form-container--container{
     min-height: 80%;
     background: #ffff;
 }
@@ -15,4 +15,9 @@
 .message-attr{
     height: 300px !important;
     resize: none;
+}
+
+.alert{
+    position: absolute;
+    top: 0;
 }
