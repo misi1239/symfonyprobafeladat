@@ -1,0 +1,18 @@
+.form-container{
+    height: 100vh;
+}
+
+.form-container .container{
+    min-height: 80%;
+    background: #ffff;
+}
+
+.form-floating{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.message-attr{
+    height: 300px !important;
+    resize: none;
+}

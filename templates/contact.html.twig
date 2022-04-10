@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+    {% block body %}
+
+      <section class="form-container d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-start flex-column">
+
+                <h2 class = "mt-4">Kapcsolatfelvétel</h2>
+
+                {% for label, messages in app.flashes(['success']) %}
+
+                    {% for message in messages %}
+                    <div class="alert alert-success col-lg-6 flash-{{ label }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                   
+                {% endfor %}
+
+                {% for label, messages in app.flashes(['warning']) %}
+
+                    {% for message in messages %}
+                    <div class="alert alert-danger col-lg-6 flash-{{ label }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+               
+                {% endfor %}
+                
+                {% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+                {{ form_start(form, { 'attr': {'class': 'form-attr container col-lg-6 mt-5 mb-5'} }) }}
+
+
+                {{ form_widget(form) }}
+
+                        
+                    <button type="submit" class="btn btn-primary">Küldés</button>
+        
+                {{ form_end(form) }}
+                
+            </div>
+      </section>
+       
+    {% endblock %}
